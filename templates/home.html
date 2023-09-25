@@ -10,7 +10,9 @@
         welcome  {{ user.username }} |  <a href="{% url "logout" %}"> Log Out</a>
         <p>  <a href="{% url "signup" %}"> Sign Up </a>
             <br>
-        <a href="{% url "password_change" %}"> Change Password </a> </p>
+        <a href="{% url "password_change" %}"> Change Password </a></p>
+        <a href="{% url "book_list" %}"> Go to Book Store </a>
+
     {% else %}
         <h1> Home </h1>
         <p>Please authenticate to enter the site </p>
