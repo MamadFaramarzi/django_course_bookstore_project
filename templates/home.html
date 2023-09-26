@@ -7,11 +7,12 @@
 {% block content %}
     {% if user.is_authenticated %}
         <h1>Home Page</h1>
-        welcome  {{ user.username }} |  <a href="{% url "logout" %}"> Log Out</a>
-        <p>  <a href="{% url "signup" %}"> Sign Up </a>
-            <br>
-        <a href="{% url "password_change" %}"> Change Password </a></p>
-        <a href="{% url "book_list" %}"> Go to Book Store </a>
+        welcome  {{ user.username }} |  <a href="{% url "logout" %}" class="btn btn-danger" > Log Out</a>
+
+        <p>   <br>
+            <a href="{% url "signup" %}" class="btn btn-success" > Sign Up </a> |
+        <a href="{% url "password_change" %}" class="btn btn-warning" > Change Password </a></p>
+        <a href="{% url "book_list" %}" class="btn btn-primary"> Go to Book Store </a>
 
     {% else %}
         <h1> Home </h1>
