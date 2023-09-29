@@ -9,5 +9,8 @@
     <h5> نویسنده : {{ books.author }}  </h5>
     <h5> توضیحات : {{ books.description }}  </h5>
     <h4> قیمت : {{ books.price }} </h4>
-     <a href="{% url "book_list" %}" class="btn btn-warning">بازگشت </a>
+     <a href="{% url "book_list" %}" class="btn btn-warning">بازگشت به لیست  </a>
+     <br>
+     <a href="{% url "book_update" books.id%}" class="btn btn-primary">ویرایش کتاب </a> |
+     <a href="{% url "book_delete" books.id%}" class="btn btn-danger">حذف کتاب </a>
 {% endblock content %}

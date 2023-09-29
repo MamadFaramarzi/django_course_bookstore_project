@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block page_title %}
+     ویرایش کتاب  {{ book.title }}
+{% endblock page_title %}
+
+
+{% block content %}
+    <h1>اطلاعات کتاب </h1>
+    <form class="mt-3" action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+        <br>
+    <button type="submit" class="btn btn-success"> update </button>
+    </form>
+{% endblock content %}

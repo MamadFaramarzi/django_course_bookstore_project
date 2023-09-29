@@ -10,6 +10,8 @@
         <p>{{ book.description }} </p>
         <a href="{{book.get_absolute_url }}" class="btn btn-primary">اطلاعات کتاب </a>
     {% endfor %}
-
+    <br>
+    <br>
+        <a href="{% url "book_create" %}" class="btn btn-success">کتاب جدید </a>
 
 {% endblock content %}

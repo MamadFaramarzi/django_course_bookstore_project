@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block page_title %}
+     حذف کتاب
+{% endblock page_title %}
+
+{% block content %}
+    <form method="post" action="{% url "book_delete" book.id %}">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <h1 class="warning"> آیا برای حذف کتاب مطمئن هستید؟</h1>
+
+     <button type="submit" name="حذف کتاب" value="yes" class="btn btn-danger">بله </button>
+{#    <a href="{% url "book_list"%}" class="btn btn-danger" >حذف کتاب </a>#}
+    <br>
+    <a href="{% url "book_detail" book.id %}" class="btn btn-success">بیخیال </a>
+
+    </form>
+
+{% endblock content %}
