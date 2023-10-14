@@ -5,6 +5,7 @@ from .models import Book, Comment
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ['user', 'text', 'book', 'datetime_created', ]
+    search_fields = ('user', 'text', 'book')
 
 
 admin.site.register(Book)
