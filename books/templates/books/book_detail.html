@@ -23,6 +23,7 @@
                             <h1>{{ book.title }}</h1>
                             <h5 class="small my-1"><span class="text-muted">نویسنده: </span>{{ book.author }}</h5>
                             <h5 class="small my-1"><span class="text-muted">مترجم: </span>{{ book.translator }}</h5>
+                            <h5 class="small my-1"><span class="text-muted">ایجاد کننده: </span>{{ book.user.username }}</h5>
                             {#                        <h5 class="small my-1"><span class="text-muted">انتشارات: </span>هوزمزد</h5>#}
                             <a href="{% url "book_update" book.id %}" class="btn btn-info"> ویرایش </a>
                             <a href="{% url "book_delete" book.id %}" class="btn btn-danger"> حذف </a>
