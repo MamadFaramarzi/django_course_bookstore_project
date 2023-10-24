@@ -1,17 +1,23 @@
 from django import forms
-from .models import Book
+from .models import Comment
 
 
-class BookForm(forms.ModelForm):
+class CommentForm(forms.ModelForm):
     class Meta:
-        model = Book
-        fields = ["title", "author", "description", "price"]
+        model = Comment
+        fields = ("text", 'recommend', )
 
 
 
 
 
 
+
+
+# class BookForm(forms.ModelForm):
+#     class Meta:
+#         model = Book
+#         fields = ["title", "author", "description", "price"]
 
 # class BookForm(forms.Form):
 #     title = forms.CharField(max_length=200)
@@ -19,4 +25,4 @@ class BookForm(forms.ModelForm):
 #     description = forms.Textarea()
 #     publication_date = forms.DateField()
 #
-#
+
